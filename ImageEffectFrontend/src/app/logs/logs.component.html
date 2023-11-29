@@ -25,6 +25,20 @@
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="startTime">Start Time:</label>
+        <input type="datetime-local" class="form-control" [(ngModel)]="startTime" id="startTime">
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="endTime">End Time:</label>
+        <input type="datetime-local" class="form-control" [(ngModel)]="endTime" id="endTime">
+      </div>
+      <div class="col-md-4 mb-3 mt-auto">
+        <div class="btn btn-primary col-12" type="button" (click)="loadLogsBetweenTimestamps()">Load Between Timestamps</div>
+      </div>
+    </div>
   
     <table class="table mt-4">
       <thead class="thead-dark">

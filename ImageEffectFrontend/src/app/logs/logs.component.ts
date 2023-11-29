@@ -13,6 +13,8 @@ export class LogsComponent implements OnInit {
 
   logs: LogModel[] = [];
   effectNameFilter: string = '';
+  startTime: string = '';
+  endTime: string = '';
 
   constructor(private logService: LogService) { }
 
@@ -81,6 +83,28 @@ export class LogsComponent implements OnInit {
         }
       }
     );
+  }
+
+  // New function to load logs between timestamps
+  loadLogsBetweenTimestamps() {
+    if (this.startTime && this.endTime) {
+      this.logService.getLogsBetweenTimestamps(this.startTime, this.endTime)
+        .pipe(
+          catchError(
+            (err: HttpErrorResponse) => {
+              console.error('Failed to retrieve logs between timestamps:', err);
+              return of(false);
+            }
+          )
+        )
+        .subscribe(
+          (data: LogModel[] | Boolean) => {
+            if (data) {
+              this.logs = <LogModel[]>data;
+            }
+          }
+        );
+    }
   }
   
 }
