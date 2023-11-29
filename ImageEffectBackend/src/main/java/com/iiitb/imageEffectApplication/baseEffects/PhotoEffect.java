@@ -1,6 +1,6 @@
 package com.iiitb.imageEffectApplication.baseEffects;
 import com.iiitb.imageEffectApplication.service.LoggingService;
-import libraryInterfaces.Pixel;
+import com.iiitb.imageEffectApplication.libraryInterfaces.Pixel;
 
 // The base effect. Every effect should call apply after setting all the parameters
 public interface PhotoEffect {

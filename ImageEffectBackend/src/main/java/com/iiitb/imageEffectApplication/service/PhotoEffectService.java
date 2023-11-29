@@ -1,7 +1,7 @@
 package com.iiitb.imageEffectApplication.service;
 
+import com.iiitb.imageEffectApplication.libraryInterfaces.Pixel;
 import com.iiitb.imageEffectApplication.utils.ProcessingUtils;
-import libraryInterfaces.Pixel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.iiitb.imageEffectApplication.utils;
 
-import libraryInterfaces.Pixel;
+import com.iiitb.imageEffectApplication.libraryInterfaces.Pixel;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
