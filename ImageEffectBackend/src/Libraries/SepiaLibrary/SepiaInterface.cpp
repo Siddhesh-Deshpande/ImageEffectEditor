@@ -1,10 +1,10 @@
-#include "com_iiitb_driveProject_libraryInterfaces_SepiaInterface.h"
+#include "com_iiitb_imageEffectApplication_libraryInterfaces_SepiaInterface.h"
 #include "Sepia.h"
 #include "../Pixel.h"
 #include <vector>
 using namespace std;
 
-JNIEXPORT jobjectArray JNICALL Java_com_iiitb_driveProject_libraryInterfaces_SepiaInterface_applySepia
+JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_SepiaInterface_applySepia
   (JNIEnv * env, jclass jobj, jobjectArray image) {
 
     vector< vector<Pixel> > imageVector;

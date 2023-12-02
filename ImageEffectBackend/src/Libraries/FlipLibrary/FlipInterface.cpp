@@ -1,10 +1,10 @@
-#include "com_iiitb_driveProject_libraryInterfaces_FlipInterface.h"
+#include "com_iiitb_imageEffectApplication_libraryInterfaces_FlipInterface.h"
 #include "Flip.h"
 #include "../Pixel.h"
 #include <vector>
 using namespace std;
 
-JNIEXPORT jobjectArray JNICALL Java_com_iiitb_driveProject_libraryInterfaces_FlipInterface_applyFlip
+JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_FlipInterface_applyFlip
   (JNIEnv * env, jclass jobj, jobjectArray image, jint horizontalFlipValue, jint verticalFlipValue) {
 
     vector< vector<Pixel> > imageVector;

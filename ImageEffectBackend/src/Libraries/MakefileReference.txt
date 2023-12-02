@@ -4,73 +4,73 @@ JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
 ARITHMETIC_LIBRARY_DESTINATION = ./ArithmeticLibrary
 ARITHMETIC_CPP_SRC = ./ArithmeticLibrary/Arithmetic.cpp ./ArithmeticLibrary/ArithmeticInterface.cpp
 ARITHMETIC_JAVA_SRC = ./libraryInterfaces/ArithmeticInterface.java
-ARITHMETIC_JNI_HEADER = ./ArithmeticLibrary/ com_iiitb_driveProject_ com_iiitb_driveProject_libraryInterfaces_ArithmeticInterface.h
+ARITHMETIC_JNI_HEADER = ./ArithmeticLibrary/ com_iiitb_imageEffectApplication_ com_iiitb_imageEffectApplication_libraryInterfaces_ArithmeticInterface.h
 ARITHMETIC_LIB_NAME = ./ArithmeticLibrary/ArithmeticLib
 
 HUE_SATURATION_LIBRARY_DESTINATION = ./HueSaturationLibrary
 HUE_SATURATION_CPP_SRC = ./HueSaturationLibrary/HueSaturation.cpp ./HueSaturationLibrary/HueSaturationInterface.cpp
 HUE_SATURATION_JAVA_SRC = ./libraryInterfaces/HueSaturationInterface.java
-HUE_SATURATION_JNI_HEADER = ./HueSaturationLibrary/ com_iiitb_driveProject_libraryInterfaces_HueSaturationInterface.h
+HUE_SATURATION_JNI_HEADER = ./HueSaturationLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_HueSaturationInterface.h
 HUE_SATURATION_LIB_NAME = ./HueSaturationLibrary/HueSaturationLib
 
 DOMINANT_COLOUR_LIBRARY_DESTINATION = ./DominantColourLibrary
 DOMINANT_COLOUR_CPP_SRC = ./DominantColourLibrary/DominantColour.cpp ./DominantColourLibrary/DominantColourInterface.cpp
 DOMINANT_COLOUR_JAVA_SRC = ./libraryInterfaces/DominantColourInterface.java
-DOMINANT_COLOUR_JNI_HEADER = ./DominantColourLibrary/ com_iiitb_driveProject_libraryInterfaces_DominantColourInterface.h
+DOMINANT_COLOUR_JNI_HEADER = ./DominantColourLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_DominantColourInterface.h
 DOMINANT_COLOUR_LIB_NAME = ./DominantColourLibrary/DominantColourLib
 
 BRIGHTNESS_LIBRARY_DESTINATION = ./BrightnessLibrary
 BRIGHTNESS_CPP_SRC = ./BrightnessLibrary/Brightness.cpp ./BrightnessLibrary/BrightnessInterface.cpp
 BRIGHTNESS_JAVA_SRC = ./libraryInterfaces/BrightnessInterface.java
-BRIGHTNESS_JNI_HEADER = ./BrightnessLibrary/ com_iiitb_driveProject_libraryInterfaces_BrightnessInterface.h
+BRIGHTNESS_JNI_HEADER = ./BrightnessLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_BrightnessInterface.h
 BRIGHTNESS_LIB_NAME = ./BrightnessLibrary/BrightnessLib
 
 CONTRAST_LIBRARY_DESTINATION = ./ContrastLibrary
 CONTRAST_CPP_SRC = ./ContrastLibrary/Contrast.cpp ./ContrastLibrary/ContrastInterface.cpp
 CONTRAST_JAVA_SRC = ./libraryInterfaces/ContrastInterface.java
-CONTRAST_JNI_HEADER = ./ContrastLibrary/ com_iiitb_driveProject_libraryInterfaces_ContrastInterface.h
+CONTRAST_JNI_HEADER = ./ContrastLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_ContrastInterface.h
 CONTRAST_LIB_NAME = ./ContrastLibrary/ContrastLib
 
 FLIP_LIBRARY_DESTINATION = ./FlipLibrary
 FLIP_CPP_SRC = ./FlipLibrary/Flip.cpp ./FlipLibrary/FlipInterface.cpp
 FLIP_JAVA_SRC = ./libraryInterfaces/FlipInterface.java
-FLIP_JNI_HEADER = ./FlipLibrary/ com_iiitb_driveProject_libraryInterfaces_FlipInterface.h
+FLIP_JNI_HEADER = ./FlipLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_FlipInterface.h
 FLIP_LIB_NAME = ./FlipLibrary/FlipLib
 
 GAUSSIAN_BLUR_LIBRARY_DESTINATION = ./GaussianBlurLibrary
 GAUSSIAN_BLUR_CPP_SRC = ./GaussianBlurLibrary/GaussianBlur.cpp ./GaussianBlurLibrary/GaussianBlurInterface.cpp
 GAUSSIAN_BLUR_JAVA_SRC = ./libraryInterfaces/GaussianBlurInterface.java
-GAUSSIAN_BLUR_JNI_HEADER = ./GaussianBlurLibrary/ com_iiitb_driveProject_libraryInterfaces_GaussianBlurInterface.h
+GAUSSIAN_BLUR_JNI_HEADER = ./GaussianBlurLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_GaussianBlurInterface.h
 GAUSSIAN_BLUR_LIB_NAME = ./GaussianBlurLibrary/GaussianBlurLib
 
 GRAYSCALE_LIBRARY_DESTINATION = ./GrayscaleLibrary
 GRAYSCALE_CPP_SRC = ./GrayscaleLibrary/Grayscale.cpp ./GrayscaleLibrary/GrayscaleInterface.cpp
 GRAYSCALE_JAVA_SRC = ./libraryInterfaces/GrayscaleInterface.java
-GRAYSCALE_JNI_HEADER = ./GrayscaleLibrary/ com_iiitb_driveProject_libraryInterfaces_GrayscaleInterface.h
+GRAYSCALE_JNI_HEADER = ./GrayscaleLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_GrayscaleInterface.h
 GRAYSCALE_LIB_NAME = ./GrayscaleLibrary/GrayscaleLib
 
 INVERT_LIBRARY_DESTINATION = ./InvertLibrary
 INVERT_CPP_SRC = ./InvertLibrary/Invert.cpp ./InvertLibrary/InvertInterface.cpp
 INVERT_JAVA_SRC = ./libraryInterfaces/InvertInterface.java
-INVERT_JNI_HEADER = ./InvertLibrary/ com_iiitb_driveProject_libraryInterfaces_InvertInterface.h
+INVERT_JNI_HEADER = ./InvertLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_InvertInterface.h
 INVERT_LIB_NAME = ./InvertLibrary/InvertLib
 
 ROTATION_LIBRARY_DESTINATION = ./RotationLibrary
 ROTATION_CPP_SRC = ./RotationLibrary/Rotation.cpp ./RotationLibrary/RotationInterface.cpp
 ROTATION_JAVA_SRC = ./libraryInterfaces/RotationInterface.java
-ROTATION_JNI_HEADER = ./RotationLibrary/ com_iiitb_driveProject_libraryInterfaces_RotationInterface.h
+ROTATION_JNI_HEADER = ./RotationLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_RotationInterface.h
 ROTATION_LIB_NAME = ./RotationLibrary/RotationLib
 
 SEPIA_LIBRARY_DESTINATION = ./SepiaLibrary
 SEPIA_CPP_SRC = ./SepiaLibrary/Sepia.cpp ./SepiaLibrary/SepiaInterface.cpp
 SEPIA_JAVA_SRC = ./libraryInterfaces/SepiaInterface.java
-SEPIA_JNI_HEADER = ./SepiaLibrary/ com_iiitb_driveProject_libraryInterfaces_SepiaInterface.h
+SEPIA_JNI_HEADER = ./SepiaLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_SepiaInterface.h
 SEPIA_LIB_NAME = ./SepiaLibrary/SepiaLib
 
 SHARPEN_LIBRARY_DESTINATION = ./SharpenLibrary
 SHARPEN_CPP_SRC = ./SharpenLibrary/Sharpen.cpp ./SharpenLibrary/SharpenInterface.cpp
 SHARPEN_JAVA_SRC = ./libraryInterfaces/SharpenInterface.java
-SHARPEN_JNI_HEADER = ./SharpenLibrary/ com_iiitb_driveProject_libraryInterfaces_SharpenInterface.h
+SHARPEN_JNI_HEADER = ./SharpenLibrary/ com_iiitb_imageEffectApplication_libraryInterfaces_SharpenInterface.h
 SHARPEN_LIB_NAME = ./SharpenLibrary/SharpenLib
 
 

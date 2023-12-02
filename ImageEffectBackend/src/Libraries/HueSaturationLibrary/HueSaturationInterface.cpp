@@ -1,10 +1,10 @@
-#include "com_iiitb_driveProject_libraryInterfaces_HueSaturationInterface.h"
+#include "com_iiitb_imageEffectApplication_libraryInterfaces_HueSaturationInterface.h"
 #include "HueSaturation.h"
 #include "../Pixel.h"
 #include <vector>
 using namespace std;
 
-JNIEXPORT jobjectArray JNICALL Java_com_iiitb_driveProject_libraryInterfaces_HueSaturationInterface_applyHueSaturation
+JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_HueSaturationInterface_applyHueSaturation
   (JNIEnv * env, jclass jobj, jobjectArray image, jfloat saturationValue, jfloat hueValue) {
 
     vector< vector<Pixel> > imageVector;

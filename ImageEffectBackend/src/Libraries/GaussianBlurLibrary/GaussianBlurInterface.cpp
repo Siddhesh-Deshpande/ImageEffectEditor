@@ -1,10 +1,10 @@
-#include "com_iiitb_driveProject_libraryInterfaces_GaussianBlurInterface.h"
+#include "com_iiitb_imageEffectApplication_libraryInterfaces_GaussianBlurInterface.h"
 #include "GaussianBlur.h"
 #include "../Pixel.h"
 #include <vector>
 using namespace std;
 
-JNIEXPORT jobjectArray JNICALL Java_com_iiitb_driveProject_libraryInterfaces_GaussianBlurInterface_applyGaussianBlur
+JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_GaussianBlurInterface_applyGaussianBlur
   (JNIEnv * env, jclass jobj, jobjectArray image, jfloat radius) {
 
     vector< vector<Pixel> > imageVector;

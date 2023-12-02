@@ -1,10 +1,10 @@
-#include "com_iiitb_driveProject_libraryInterfaces_ContrastInterface.h"
+#include "com_iiitb_imageEffectApplication_libraryInterfaces_ContrastInterface.h"
 #include "Contrast.h"
 #include "../Pixel.h"
 #include <vector>
 using namespace std;
 
-JNIEXPORT jobjectArray JNICALL Java_com_iiitb_driveProject_libraryInterfaces_ContrastInterface_applyContrast
+JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_ContrastInterface_applyContrast
   (JNIEnv * env, jclass jobj, jobjectArray image, jfloat amount) {
 
     vector< vector<Pixel> > imageVector;

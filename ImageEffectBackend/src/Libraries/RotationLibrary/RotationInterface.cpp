@@ -1,10 +1,10 @@
-#include "com_iiitb_driveProject_libraryInterfaces_RotationInterface.h"
+#include "com_iiitb_imageEffectApplication_libraryInterfaces_RotationInterface.h"
 #include "Rotation.h"
 #include "../Pixel.h"
 #include <vector>
 using namespace std;
 
-JNIEXPORT jobjectArray JNICALL Java_com_iiitb_driveProject_libraryInterfaces_RotationInterface_applyRotation
+JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_RotationInterface_applyRotation
   (JNIEnv * env, jclass jobj, jobjectArray image, jint value) {
 
     vector< vector<Pixel> > imageVector;

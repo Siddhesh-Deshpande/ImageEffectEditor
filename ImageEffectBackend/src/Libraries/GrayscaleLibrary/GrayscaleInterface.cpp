@@ -1,10 +1,10 @@
-#include "com_iiitb_driveProject_libraryInterfaces_GrayscaleInterface.h"
+#include "com_iiitb_imageEffectApplication_libraryInterfaces_GrayscaleInterface.h"
 #include "Grayscale.h"
 #include "../Pixel.h"
 #include <vector>
 using namespace std;
 
-JNIEXPORT jobjectArray JNICALL Java_com_iiitb_driveProject_libraryInterfaces_GrayscaleInterface_applyGrayscale
+JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_GrayscaleInterface_applyGrayscale
   (JNIEnv * env, jclass jobj, jobjectArray image) {
 
     vector< vector<Pixel> > imageVector;

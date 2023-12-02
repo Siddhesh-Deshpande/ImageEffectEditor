@@ -1,10 +1,10 @@
-#include "com_iiitb_driveProject_libraryInterfaces_SharpenInterface.h"
+#include "com_iiitb_imageEffectApplication_libraryInterfaces_SharpenInterface.h"
 #include "Sharpen.h"
 #include "../Pixel.h"
 #include <vector>
 using namespace std;
 
-JNIEXPORT jobjectArray JNICALL Java_com_iiitb_driveProject_libraryInterfaces_SharpenInterface_applySharpen
+JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_SharpenInterface_applySharpen
   (JNIEnv * env, jclass jobj, jobjectArray image, jfloat amount) {
 
     vector< vector<Pixel> > imageVector;
