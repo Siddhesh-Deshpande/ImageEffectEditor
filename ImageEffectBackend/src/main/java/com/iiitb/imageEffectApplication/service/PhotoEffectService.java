@@ -1,5 +1,8 @@
 package com.iiitb.imageEffectApplication.service;
-
+import  com.iiitb.imageEffectApplication.service.LoggingService;
+import com.iiitb.imageEffectApplication.Effect.*;
+import com.iiitb.imageEffectApplication.exception.IllegalParameterException;
+import com.iiitb.imageEffectApplication.libraryInterfaces.*;
 import com.iiitb.imageEffectApplication.libraryInterfaces.Pixel;
 import com.iiitb.imageEffectApplication.utils.ProcessingUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,19 +25,18 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
-
-
-            // ACTUAL WORK STARTS HERE
-
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
+            HueSaturationEffect h = new HueSaturationEffect();
+            h.setParameter("hue",hueAmount);
+            h.setParameter("sat", saturationAmount);
             // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
-
+            Pixel[][] modifiedImage = h.apply(inputImage, imageName, loggingService);
             // ACTUAL WORK ENDS HERE
 
 
             return processingUtils.postProcessing(modifiedImage);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -44,14 +46,12 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
 
+            BrightnessEffect bright = new BrightnessEffect();
+            bright.setParameterValue(amount);
 
-
-
-            // ACTUAL WORK STARTS HERE
-
-            // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
+            Pixel[][] modifiedImage = bright.apply(inputImage, imageName, loggingService);
 
             // ACTUAL WORK ENDS HERE
 
@@ -59,7 +59,7 @@ public class PhotoEffectService {
 
             return processingUtils.postProcessing(modifiedImage);
 
-        } catch (IOException e) {
+        } catch (IOException | IllegalParameterException e) {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -69,13 +69,14 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
-
+//creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
 
 
             // ACTUAL WORK STARTS HERE
-
+            ContrastEffect contrast  = new ContrastEffect();
+            contrast.setParameterValue(amount);
             // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
+            Pixel[][] modifiedImage = contrast.apply(inputImage, imageName, loggingService); // Replace this with actual modified image
 
             // ACTUAL WORK ENDS HERE
 
@@ -83,7 +84,7 @@ public class PhotoEffectService {
 
             return processingUtils.postProcessing(modifiedImage);
 
-        } catch (IOException e) {
+        } catch (IOException |  IllegalParameterException e) {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -93,13 +94,13 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
-
-
-
-            // ACTUAL WORK STARTS HERE
-
-            // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
+            FlipEffect flip = new FlipEffect();
+            flip.selectOptionValue("vertical",verticalFlipValue);
+            flip.selectOptionValue("horizontal", horizontalFlipValue);
+            
+            
+            Pixel[][]modifiedImage = flip.apply(inputImage, imageName, loggingService);
 
             // ACTUAL WORK ENDS HERE
 
@@ -108,7 +109,7 @@ public class PhotoEffectService {
 
             return processingUtils.postProcessing(modifiedImage);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -118,12 +119,12 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
+            GaussianBlurEffect gb = new GaussianBlurEffect();
+            gb.setParameterValue(radius);
 
-
-            // ACTUAL WORK STARTS HERE
-
-            // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
+            
+            Pixel[][] modifiedImage = gb.apply(inputImage, imageName, loggingService);
 
             // ACTUAL WORK ENDS HERE
 
@@ -131,7 +132,7 @@ public class PhotoEffectService {
 
             return processingUtils.postProcessing(modifiedImage);
 
-        } catch (IOException e) {
+        } catch (IOException | IllegalParameterException e) {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -141,12 +142,12 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
-
-
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
+            GrayscaleEffect gray = new GrayscaleEffect();
             // ACTUAL WORK STARTS HERE
-
+            
             // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
+            Pixel[][] modifiedImage = gray.apply(inputImage, imageName, loggingService); // Replace this with actual modified image
 
             // ACTUAL WORK ENDS HERE
 
@@ -162,11 +163,9 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
-
-            // ACTUAL WORK STARTS HERE
-
-            // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
+            InvertEffect invert = new InvertEffect();
+            Pixel[][] modifiedImage = invert.apply(inputImage, imageName, loggingService); // Replace this with actual modified image
 
             // ACTUAL WORK ENDS HERE
 
@@ -182,19 +181,20 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
+            RotationEffect rotate =  new RotationEffect();
+            rotate.setParameterValue(value);
 
+            
+            Pixel[][] modifiedImage = rotate.apply(inputImage, imageName, loggingService);
 
-            // ACTUAL WORK STARTS HERE
-
-            // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
 
             // ACTUAL WORK ENDS HERE
 
 
             return processingUtils.postProcessing(modifiedImage);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -204,11 +204,14 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
+            SepiaEffect sepia = new SepiaEffect();
+            
 
             // ACTUAL WORK STARTS HERE
-
+            
             // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
+            Pixel[][] modifiedImage = sepia.apply(inputImage, imageName, loggingService); // Replace this with actual modified image
 
             // ACTUAL WORK ENDS HERE
 
@@ -224,17 +227,19 @@ public class PhotoEffectService {
         try {
             Pixel[][] inputImage = processingUtils.preprocessing(imageFile);
             String imageName = imageFile.getOriginalFilename();
-
+            //creating the object of the effect class and setting the parameters if required and then applyiing it by calling the apply function that is overriden in java files while implementing 
+            SharpenEffect sharpen = new SharpenEffect();
             // ACTUAL WORK STARTS HERE
+            sharpen.setParameterValue(amount);
 
-            // TODO
-            Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
+           
+            Pixel [][]modifiedImage = sharpen.apply(inputImage, imageName, loggingService);
 
             // ACTUAL WORK ENDS HERE
 
             return processingUtils.postProcessing(modifiedImage);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -246,7 +251,6 @@ public class PhotoEffectService {
             String imageName = imageFile.getOriginalFilename();
 
             // ACTUAL WORK STARTS HERE
-
             // TODO
             Pixel[][] modifiedImage = inputImage; // Replace this with actual modified image
 

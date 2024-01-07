@@ -55,7 +55,7 @@ JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInte
 
     // Call the function here
     // TODO
-
+     applyFlip(imageVector,static_cast<int>(horizontalFlipValue),static_cast<int>(verticalFlipValue));
 
 
 

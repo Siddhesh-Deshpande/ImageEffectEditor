@@ -7,7 +7,7 @@ using namespace std;
 JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInterfaces_BrightnessInterface_applyBrightness
   (JNIEnv * env, jclass jobj, jobjectArray image, jfloat amount) {
 
-    vector< vector<Pixel> > imageVector;
+    vector<vector<Pixel> > imageVector;
     jsize rows = env->GetArrayLength(image);
     jclass pixelArrayClass, pixelClass;
 
@@ -55,6 +55,7 @@ JNIEXPORT jobjectArray JNICALL Java_com_iiitb_imageEffectApplication_libraryInte
 
     // Call the function here
     // TODO
+    applyBrightness(imageVector,static_cast<float>(amount));
 
 
 
